@@ -1,0 +1,2 @@
+# TriviaApp
+Mobiilirakenduste Alused Projekt.
