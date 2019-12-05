@@ -20,9 +20,24 @@ namespace TriviaApp
 
             //OPENTRIVIA DB LINK - https://opentdb.com/api_config.php
 
+            var quitButton = FindViewById<Button>(Resource.Id.quitButton);
+            var startButton = FindViewById<Button>(Resource.Id.startButton);
+
+            quitButton.Click += QuitButton_click;
+            startButton.Click += StartButton_click;
+
 
         }
 
+        private void QuitButton_click(object sender, EventArgs e)
+        {
+            Process.KillProcess(Process.MyPid());
+        }
+
+        private void StartButton_click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
 
