@@ -2,6 +2,7 @@ C:\Users\opilane\Documents\schamardin_git\triviaapp\TriviaApp\TriviaApp\obj\Debu
 C:\Users\opilane\Documents\schamardin_git\triviaapp\TriviaApp\TriviaApp\obj\Debug\81\android\assets\Java.Interop.dll
 C:\Users\opilane\Documents\schamardin_git\triviaapp\TriviaApp\TriviaApp\obj\Debug\81\android\assets\Mono.Android.dll
 C:\Users\opilane\Documents\schamardin_git\triviaapp\TriviaApp\TriviaApp\obj\Debug\81\android\assets\mscorlib.dll
+C:\Users\opilane\Documents\schamardin_git\triviaapp\TriviaApp\TriviaApp\obj\Debug\81\android\assets\Newtonsoft.Json.dll
 C:\Users\opilane\Documents\schamardin_git\triviaapp\TriviaApp\TriviaApp\obj\Debug\81\android\assets\System.Core.dll
 C:\Users\opilane\Documents\schamardin_git\triviaapp\TriviaApp\TriviaApp\obj\Debug\81\android\assets\System.dll
 C:\Users\opilane\Documents\schamardin_git\triviaapp\TriviaApp\TriviaApp\obj\Debug\81\android\assets\System.Xml.dll
@@ -23,4 +24,13 @@ C:\Users\opilane\Documents\schamardin_git\triviaapp\TriviaApp\TriviaApp\obj\Debu
 C:\Users\opilane\Documents\schamardin_git\triviaapp\TriviaApp\TriviaApp\obj\Debug\81\android\assets\System.Net.Http.dll
 C:\Users\opilane\Documents\schamardin_git\triviaapp\TriviaApp\TriviaApp\obj\Debug\81\android\assets\System.Runtime.Serialization.dll
 C:\Users\opilane\Documents\schamardin_git\triviaapp\TriviaApp\TriviaApp\obj\Debug\81\android\assets\System.ServiceModel.Internals.dll
+C:\Users\opilane\Documents\schamardin_git\triviaapp\TriviaApp\TriviaApp\obj\Debug\81\android\assets\netstandard.dll
+C:\Users\opilane\Documents\schamardin_git\triviaapp\TriviaApp\TriviaApp\obj\Debug\81\android\assets\System.Data.dll
+C:\Users\opilane\Documents\schamardin_git\triviaapp\TriviaApp\TriviaApp\obj\Debug\81\android\assets\System.Numerics.dll
+C:\Users\opilane\Documents\schamardin_git\triviaapp\TriviaApp\TriviaApp\obj\Debug\81\android\assets\System.Transactions.dll
+C:\Users\opilane\Documents\schamardin_git\triviaapp\TriviaApp\TriviaApp\obj\Debug\81\android\assets\System.IO.Compression.dll
+C:\Users\opilane\Documents\schamardin_git\triviaapp\TriviaApp\TriviaApp\obj\Debug\81\android\assets\System.IO.Compression.FileSystem.dll
+C:\Users\opilane\Documents\schamardin_git\triviaapp\TriviaApp\TriviaApp\obj\Debug\81\android\assets\System.ComponentModel.Composition.dll
+C:\Users\opilane\Documents\schamardin_git\triviaapp\TriviaApp\TriviaApp\obj\Debug\81\android\assets\System.Web.Services.dll
+C:\Users\opilane\Documents\schamardin_git\triviaapp\TriviaApp\TriviaApp\obj\Debug\81\android\assets\System.Xml.Linq.dll
 C:\Users\opilane\Documents\schamardin_git\triviaapp\TriviaApp\TriviaApp\obj\Debug\81\android\assets\Mono.Security.dll
