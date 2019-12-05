@@ -2,28 +2,28 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
 using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using TriviaApp.Core.Models;
 
 namespace TriviaApp
 {
-    class QuestionsAdapter : BaseAdapter<PeopleDetails>
+    class QuestionsAdapter : BaseAdapter<QuestionDetails>
     {
-        List<PeopleDetails> _items;
+        List<QuestionDetails> _items;
         Activity _context;
 
-        public QuestionsAdapter(Activity context, List<PeopleDetails> items) : base()
+        public QuestionsAdapter(Activity context, List<QuestionDetails> items) : base()
         {
             this._context = context;
             this._items = items;
         }
 
-        public override PeopleDetails this[int position]
+        public override QuestionDetails this[int position]
         {
             get { return _items[position]; }
         }
@@ -44,8 +44,8 @@ namespace TriviaApp
 
             View view = convertView;
 
-            if (view == null)
-                view = _context.LayoutInflater.Inflate(Resource.Layout.people_row_layout, null);
+            //if (view == null)
+            //    view = _context.LayoutInflater.Inflate(Resource.Layout.people_row_layout, null);
 
             return view;
         }
