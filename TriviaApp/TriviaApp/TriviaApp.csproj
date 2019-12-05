@@ -56,10 +56,10 @@
     <Reference Include="Mono.Android" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataServiceQuestions.cs" />
+    <Compile Include="Services\DataServiceQuestions.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Models\Question.cs" />
-    <Compile Include="QuestionsAdapter.cs" />
+    <Compile Include="Adapters\QuestionsAdapter.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

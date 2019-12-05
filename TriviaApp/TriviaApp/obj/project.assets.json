@@ -521,11 +521,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\opilane\\Documents\\schamardin_git\\triviaapp\\TriviaApp\\TriviaApp\\TriviaApp.csproj",
+      "projectUniqueName": "C:\\GitHub_Mob_Al_PR02\\TriviaApp\\TriviaApp\\TriviaApp\\TriviaApp.csproj",
       "projectName": "TriviaApp",
-      "projectPath": "C:\\Users\\opilane\\Documents\\schamardin_git\\triviaapp\\TriviaApp\\TriviaApp\\TriviaApp.csproj",
+      "projectPath": "C:\\GitHub_Mob_Al_PR02\\TriviaApp\\TriviaApp\\TriviaApp\\TriviaApp.csproj",
       "packagesPath": "C:\\Users\\opilane\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\opilane\\Documents\\schamardin_git\\triviaapp\\TriviaApp\\TriviaApp\\obj\\",
+      "outputPath": "C:\\GitHub_Mob_Al_PR02\\TriviaApp\\TriviaApp\\TriviaApp\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
