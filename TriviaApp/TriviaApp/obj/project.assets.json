@@ -255,6 +255,19 @@
         "build": {
           "build/MonoAndroid81/Xamarin.Android.Support.Vector.Drawable.targets": {}
         }
+      },
+      "TriviaApp.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "compile": {
+          "bin/placeholder/TriviaApp.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TriviaApp.Core.dll": {}
+        }
       }
     }
   },
@@ -507,29 +520,35 @@
         "xamarin.android.support.vector.drawable.27.0.2.1.nupkg.sha512",
         "xamarin.android.support.vector.drawable.nuspec"
       ]
+    },
+    "TriviaApp.Core/1.0.0": {
+      "type": "project",
+      "path": "../TriviaApp.Core/TriviaApp.Core.csproj",
+      "msbuildProject": "../TriviaApp.Core/TriviaApp.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "MonoAndroid,Version=v8.1": [
       "Newtonsoft.Json >= 12.0.3",
+      "TriviaApp.Core >= 1.0.0",
       "Xamarin.Android.Support.Design >= 27.0.2.1"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\opilane\\.nuget\\packages\\": {}
+    "C:\\Users\\georg\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\GitHub_Mob_Al_PR02\\TriviaApp\\TriviaApp\\TriviaApp\\TriviaApp.csproj",
+      "projectUniqueName": "C:\\Users\\georg\\Desktop\\TriviaAppReal\\TriviaApp\\TriviaApp\\TriviaApp.csproj",
       "projectName": "TriviaApp",
-      "projectPath": "C:\\GitHub_Mob_Al_PR02\\TriviaApp\\TriviaApp\\TriviaApp\\TriviaApp.csproj",
-      "packagesPath": "C:\\Users\\opilane\\.nuget\\packages\\",
-      "outputPath": "C:\\GitHub_Mob_Al_PR02\\TriviaApp\\TriviaApp\\TriviaApp\\obj\\",
+      "projectPath": "C:\\Users\\georg\\Desktop\\TriviaAppReal\\TriviaApp\\TriviaApp\\TriviaApp.csproj",
+      "packagesPath": "C:\\Users\\georg\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\georg\\Desktop\\TriviaAppReal\\TriviaApp\\TriviaApp\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "C:\\Users\\opilane\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\georg\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -541,7 +560,11 @@
       },
       "frameworks": {
         "monoandroid81": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\georg\\Desktop\\TriviaAppReal\\TriviaApp\\TriviaApp.Core\\TriviaApp.Core.csproj": {
+              "projectPath": "C:\\Users\\georg\\Desktop\\TriviaAppReal\\TriviaApp\\TriviaApp.Core\\TriviaApp.Core.csproj"
+            }
+          }
         }
       }
     },

@@ -587,7 +587,6 @@ int dimen design_tab_text_size 0x7f070085
 int dimen design_tab_text_size_2line 0x7f070086
 int dimen disabled_alpha_material_dark 0x7f070050
 int dimen disabled_alpha_material_light 0x7f070051
-int dimen fab_margin 0x7f07009b
 int dimen fastscroll_default_thickness 0x7f070000
 int dimen fastscroll_margin 0x7f070001
 int dimen fastscroll_minimum_range 0x7f070002
@@ -759,7 +758,6 @@ int id action_menu_presenter 0x7f080004
 int id action_mode_bar 0x7f080079
 int id action_mode_bar_stub 0x7f080078
 int id action_mode_close_button 0x7f08005c
-int id action_settings 0x7f0800b2
 int id action_text 0x7f08009e
 int id actions 0x7f0800ac
 int id activity_chooser_view_content 0x7f08005d
@@ -986,7 +984,6 @@ int layout select_dialog_multichoice_material 0x7f040039
 int layout select_dialog_singlechoice_material 0x7f04003a
 int layout support_simple_spinner_dropdown_item 0x7f04003b
 int layout tooltip 0x7f04003c
-int menu menu_main 0x7f0e0000
 int mipmap ic_launcher 0x7f030000
 int mipmap ic_launcher_foreground 0x7f030001
 int mipmap ic_launcher_round 0x7f030002
@@ -1038,9 +1035,6 @@ int style Animation_AppCompat_DropDownUp 0x7f0a0098
 int style Animation_AppCompat_Tooltip 0x7f0a0099
 int style Animation_Design_BottomSheetDialog 0x7f0a015f
 int style AppTheme 0x7f0a0180
-int style AppTheme_AppBarOverlay 0x7f0a0182
-int style AppTheme_NoActionBar 0x7f0a0181
-int style AppTheme_PopupOverlay 0x7f0a0183
 int style Base_AlertDialog_AppCompat 0x7f0a009a
 int style Base_AlertDialog_AppCompat_Light 0x7f0a009b
 int style Base_Animation_AppCompat_Dialog 0x7f0a009c
