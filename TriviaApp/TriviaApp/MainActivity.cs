@@ -33,7 +33,8 @@ namespace TriviaApp
 
         private void StartButton_click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            //var intent = new Intent(this, typeof(People_Activity));
+            //this.StartActivity(intent);
         }
     }
 }
