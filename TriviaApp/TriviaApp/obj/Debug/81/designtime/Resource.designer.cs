@@ -2387,8 +2387,8 @@ namespace TriviaApp
 			// aapt resource value: 0x7F0C0018
 			public const int auto = 2131492888;
 			
-			// aapt resource value: 0x7F010010
-			public const int beginButton = 2130771984;
+			// aapt resource value: 0x7F010011
+			public const int beginButton = 2130771985;
 			
 			// aapt resource value: 0x7F0C0007
 			public const int blocking = 2131492871;
@@ -2489,17 +2489,17 @@ namespace TriviaApp
 			// aapt resource value: 0x7F0C000C
 			public const int info = 2131492876;
 			
-			// aapt resource value: 0x7F010006
-			public const int inputQuestionAmount = 2130771974;
-			
 			// aapt resource value: 0x7F010007
-			public const int inputQuestionCategory = 2130771975;
+			public const int inputQuestionAmount = 2130771975;
 			
 			// aapt resource value: 0x7F010008
-			public const int inputQuestionDifficulty = 2130771976;
+			public const int inputQuestionCategory = 2130771976;
 			
 			// aapt resource value: 0x7F010009
-			public const int inputQuestionType = 2130771977;
+			public const int inputQuestionDifficulty = 2130771977;
+			
+			// aapt resource value: 0x7F010010
+			public const int inputQuestionType = 2130771984;
 			
 			// aapt resource value: 0x7F0C000D
 			public const int italic = 2131492877;
@@ -2575,6 +2575,9 @@ namespace TriviaApp
 			
 			// aapt resource value: 0x7F0C0052
 			public const int progress_horizontal = 2131492946;
+			
+			// aapt resource value: 0x7F010005
+			public const int questionsListView = 2130771973;
 			
 			// aapt resource value: 0x7F010004
 			public const int quitButton = 2130771972;
@@ -2717,8 +2720,8 @@ namespace TriviaApp
 			// aapt resource value: 0x7F010002
 			public const int textView1 = 2130771970;
 			
-			// aapt resource value: 0x7F010005
-			public const int textViewStart = 2130771973;
+			// aapt resource value: 0x7F010006
+			public const int textViewStart = 2130771974;
 			
 			// aapt resource value: 0x7F0C007D
 			public const int text_input_password_toggle = 2131492989;
@@ -3001,6 +3004,9 @@ namespace TriviaApp
 			// aapt resource value: 0x7F020003
 			public const int Questions_Layout = 2130837507;
 			
+			// aapt resource value: 0x7F020004
+			public const int Questions_Row_Layout = 2130837508;
+			
 			// aapt resource value: 0x7F0F0038
 			public const int select_dialog_item_material = 2131689528;
 			
@@ -3010,8 +3016,8 @@ namespace TriviaApp
 			// aapt resource value: 0x7F0F003A
 			public const int select_dialog_singlechoice_material = 2131689530;
 			
-			// aapt resource value: 0x7F020004
-			public const int Start_Layout = 2130837508;
+			// aapt resource value: 0x7F020005
+			public const int Start_Layout = 2130837509;
 			
 			// aapt resource value: 0x7F0F003B
 			public const int support_simple_spinner_dropdown_item = 2131689531;

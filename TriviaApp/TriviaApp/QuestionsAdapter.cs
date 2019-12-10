@@ -45,8 +45,10 @@ namespace TriviaApp
 
             View view = convertView;
 
-            //if (view == null)
-            //    view = _context.LayoutInflater.Inflate(Resource.Layout.people_row_layout, null);
+            if (view == null)
+                view = _context.LayoutInflater.Inflate(Resource.Layout.Questions_Row_Layout, null);
+         
+            //view.FindViewById<TextView>(Resource.Id.textViewQuestion).Text = item.Question;
 
             return view;
         }

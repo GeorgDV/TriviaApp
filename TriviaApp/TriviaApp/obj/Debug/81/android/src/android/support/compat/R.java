@@ -2979,8 +2979,13 @@ containing a value of this type.
         public static int alertTitle=0x7f080070;
         public static int all=0x7f080052;
         public static int always=0x7f080038;
+        public static int answer1Btn=0x7f0800b1;
+        public static int answer2Btn=0x7f0800b2;
+        public static int answer3Btn=0x7f0800b3;
+        public static int answer4Btn=0x7f0800b4;
         public static int async=0x7f080056;
         public static int auto=0x7f080044;
+        public static int beginButton=0x7f0800ba;
         public static int beginning=0x7f08002f;
         public static int blocking=0x7f080057;
         public static int bottom=0x7f08003d;
@@ -3028,6 +3033,10 @@ containing a value of this type.
         public static int ifRoom=0x7f08003a;
         public static int image=0x7f08005f;
         public static int info=0x7f0800a9;
+        public static int inputQuestionAmount=0x7f0800b6;
+        public static int inputQuestionCategory=0x7f0800b7;
+        public static int inputQuestionDifficulty=0x7f0800b8;
+        public static int inputQuestionType=0x7f0800b9;
         public static int italic=0x7f080059;
         public static int item_touch_helper_previous_elevation=0x7f080000;
         public static int largeLabel=0x7f08008f;
@@ -3036,9 +3045,9 @@ containing a value of this type.
         public static int line3=0x7f080018;
         public static int listMode=0x7f08001d;
         public static int list_item=0x7f080061;
-        public static int masked=0x7f0800b1;
+        public static int masked=0x7f0800bd;
         public static int media_actions=0x7f0800a2;
-        public static int message=0x7f0800af;
+        public static int message=0x7f0800bb;
         public static int middle=0x7f080031;
         public static int mini=0x7f080053;
         public static int multiply=0x7f080028;
@@ -3055,6 +3064,7 @@ containing a value of this type.
         public static int pin=0x7f08004d;
         public static int progress_circular=0x7f080006;
         public static int progress_horizontal=0x7f080007;
+        public static int questionsListView=0x7f0800af;
         public static int quitButton=0x7f08008d;
         public static int radio=0x7f080075;
         public static int right=0x7f08004a;
@@ -3105,6 +3115,8 @@ containing a value of this type.
         public static int textSpacerNoButtons=0x7f08006a;
         public static int textSpacerNoTitle=0x7f080069;
         public static int textView1=0x7f08008b;
+        public static int textViewQuestion=0x7f0800b0;
+        public static int textViewStart=0x7f0800b5;
         public static int text_input_password_toggle=0x7f08009b;
         public static int textinput_counter=0x7f080014;
         public static int textinput_error=0x7f080015;
@@ -3124,7 +3136,7 @@ containing a value of this type.
         public static int up=0x7f080009;
         public static int useLogo=0x7f080026;
         public static int view_offset_helper=0x7f080016;
-        public static int visible=0x7f0800b0;
+        public static int visible=0x7f0800bc;
         public static int withText=0x7f08003c;
         public static int wrap_content=0x7f08002e;
     }
@@ -3197,11 +3209,14 @@ containing a value of this type.
         public static int notification_template_media_custom=0x7f040035;
         public static int notification_template_part_chronometer=0x7f040036;
         public static int notification_template_part_time=0x7f040037;
-        public static int select_dialog_item_material=0x7f040038;
-        public static int select_dialog_multichoice_material=0x7f040039;
-        public static int select_dialog_singlechoice_material=0x7f04003a;
-        public static int support_simple_spinner_dropdown_item=0x7f04003b;
-        public static int tooltip=0x7f04003c;
+        public static int questions_layout=0x7f040038;
+        public static int questions_row_layout=0x7f040039;
+        public static int select_dialog_item_material=0x7f04003a;
+        public static int select_dialog_multichoice_material=0x7f04003b;
+        public static int select_dialog_singlechoice_material=0x7f04003c;
+        public static int start_layout=0x7f04003d;
+        public static int support_simple_spinner_dropdown_item=0x7f04003e;
+        public static int tooltip=0x7f04003f;
     }
     public static final class mipmap {
         public static int ic_launcher=0x7f030000;
