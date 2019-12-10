@@ -1,5 +1,6 @@
 Newtonsoft.Json
 System.Runtime
+TriviaApp.Core
 Xamarin.Android.Arch.Core.Common
 Xamarin.Android.Arch.Lifecycle.Common
 Xamarin.Android.Arch.Lifecycle.Runtime

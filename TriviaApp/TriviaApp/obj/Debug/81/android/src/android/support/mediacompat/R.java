@@ -2797,7 +2797,6 @@ containing a value of this type.
         public static int design_tab_text_size_2line=0x7f070086;
         public static int disabled_alpha_material_dark=0x7f070050;
         public static int disabled_alpha_material_light=0x7f070051;
-        public static int fab_margin=0x7f07009b;
         public static int fastscroll_default_thickness=0x7f070000;
         public static int fastscroll_margin=0x7f070001;
         public static int fastscroll_minimum_range=0x7f070002;
@@ -2973,7 +2972,6 @@ containing a value of this type.
         public static int action_mode_bar=0x7f080079;
         public static int action_mode_bar_stub=0x7f080078;
         public static int action_mode_close_button=0x7f08005c;
-        public static int action_settings=0x7f0800b2;
         public static int action_text=0x7f08009e;
         public static int actions=0x7f0800ac;
         public static int activity_chooser_view_content=0x7f08005d;
@@ -3205,9 +3203,6 @@ containing a value of this type.
         public static int support_simple_spinner_dropdown_item=0x7f04003b;
         public static int tooltip=0x7f04003c;
     }
-    public static final class menu {
-        public static int menu_main=0x7f0e0000;
-    }
     public static final class mipmap {
         public static int ic_launcher=0x7f030000;
         public static int ic_launcher_foreground=0x7f030001;
@@ -3266,9 +3261,6 @@ containing a value of this type.
         /**  Base application theme. 
          */
         public static int AppTheme=0x7f0a0180;
-        public static int AppTheme_AppBarOverlay=0x7f0a0182;
-        public static int AppTheme_NoActionBar=0x7f0a0181;
-        public static int AppTheme_PopupOverlay=0x7f0a0183;
         public static int Base_AlertDialog_AppCompat=0x7f0a009a;
         public static int Base_AlertDialog_AppCompat_Light=0x7f0a009b;
         public static int Base_Animation_AppCompat_Dialog=0x7f0a009c;

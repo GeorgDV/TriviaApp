@@ -1863,9 +1863,6 @@ namespace TriviaApp
 			// aapt resource value: 0x7f070051
 			public const int disabled_alpha_material_light = 2131165265;
 			
-			// aapt resource value: 0x7f07009b
-			public const int fab_margin = 2131165339;
-			
 			// aapt resource value: 0x7f070000
 			public const int fastscroll_default_thickness = 2131165184;
 			
@@ -2404,9 +2401,6 @@ namespace TriviaApp
 			
 			// aapt resource value: 0x7f08005c
 			public const int action_mode_close_button = 2131230812;
-			
-			// aapt resource value: 0x7f0800b2
-			public const int action_settings = 2131230898;
 			
 			// aapt resource value: 0x7f08009e
 			public const int action_text = 2131230878;
@@ -3122,22 +3116,6 @@ namespace TriviaApp
 			}
 		}
 		
-		public partial class Menu
-		{
-			
-			// aapt resource value: 0x7f0e0000
-			public const int menu_main = 2131623936;
-			
-			static Menu()
-			{
-				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
-			}
-			
-			private Menu()
-			{
-			}
-		}
-		
 		public partial class Mipmap
 		{
 			
@@ -3319,15 +3297,6 @@ namespace TriviaApp
 			
 			// aapt resource value: 0x7f0a0180
 			public const int AppTheme = 2131362176;
-			
-			// aapt resource value: 0x7f0a0182
-			public const int AppTheme_AppBarOverlay = 2131362178;
-			
-			// aapt resource value: 0x7f0a0181
-			public const int AppTheme_NoActionBar = 2131362177;
-			
-			// aapt resource value: 0x7f0a0183
-			public const int AppTheme_PopupOverlay = 2131362179;
 			
 			// aapt resource value: 0x7f0a009a
 			public const int Base_AlertDialog_AppCompat = 2131361946;

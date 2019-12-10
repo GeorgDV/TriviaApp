@@ -108,6 +108,7 @@ class MonoPackageManager_Resources {
 		/* We need to ensure that "TriviaApp.dll" comes first in this list. */
 		"TriviaApp.dll",
 		"Newtonsoft.Json.dll",
+		"TriviaApp.Core.dll",
 		"Xamarin.Android.Arch.Core.Common.dll",
 		"Xamarin.Android.Arch.Lifecycle.Common.dll",
 		"Xamarin.Android.Arch.Lifecycle.Runtime.dll",
