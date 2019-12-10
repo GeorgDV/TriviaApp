@@ -4,6 +4,7 @@ using Android.Support.V7.App;
 using Android.Runtime;
 using Android.Widget;
 using System;
+using Android.Content;
 
 namespace TriviaApp
 {
@@ -33,8 +34,8 @@ namespace TriviaApp
 
         private void StartButton_click(object sender, EventArgs e)
         {
-            //var intent = new Intent(this, typeof(People_Activity));
-            //this.StartActivity(intent);
+            var intent = new Intent(this, typeof(StartActivity));
+            this.StartActivity(intent);
         }
     }
 }

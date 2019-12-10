@@ -2981,6 +2981,7 @@ containing a value of this type.
         public static final int always=0x7f080038;
         public static final int async=0x7f080056;
         public static final int auto=0x7f080044;
+        public static final int beginButton=0x7f0800b4;
         public static final int beginning=0x7f08002f;
         public static final int blocking=0x7f080057;
         public static final int bottom=0x7f08003d;
@@ -3028,6 +3029,10 @@ containing a value of this type.
         public static final int ifRoom=0x7f08003a;
         public static final int image=0x7f08005f;
         public static final int info=0x7f0800a9;
+        public static final int inputQuestionAmount=0x7f0800b0;
+        public static final int inputQuestionCategory=0x7f0800b1;
+        public static final int inputQuestionDifficulty=0x7f0800b2;
+        public static final int inputQuestionType=0x7f0800b3;
         public static final int italic=0x7f080059;
         public static final int item_touch_helper_previous_elevation=0x7f080000;
         public static final int largeLabel=0x7f08008f;
@@ -3036,9 +3041,9 @@ containing a value of this type.
         public static final int line3=0x7f080018;
         public static final int listMode=0x7f08001d;
         public static final int list_item=0x7f080061;
-        public static final int masked=0x7f0800b1;
+        public static final int masked=0x7f0800b7;
         public static final int media_actions=0x7f0800a2;
-        public static final int message=0x7f0800af;
+        public static final int message=0x7f0800b5;
         public static final int middle=0x7f080031;
         public static final int mini=0x7f080053;
         public static final int multiply=0x7f080028;
@@ -3105,6 +3110,7 @@ containing a value of this type.
         public static final int textSpacerNoButtons=0x7f08006a;
         public static final int textSpacerNoTitle=0x7f080069;
         public static final int textView1=0x7f08008b;
+        public static final int textViewStart=0x7f0800af;
         public static final int text_input_password_toggle=0x7f08009b;
         public static final int textinput_counter=0x7f080014;
         public static final int textinput_error=0x7f080015;
@@ -3124,7 +3130,7 @@ containing a value of this type.
         public static final int up=0x7f080009;
         public static final int useLogo=0x7f080026;
         public static final int view_offset_helper=0x7f080016;
-        public static final int visible=0x7f0800b0;
+        public static final int visible=0x7f0800b6;
         public static final int withText=0x7f08003c;
         public static final int wrap_content=0x7f08002e;
     }
@@ -3197,11 +3203,13 @@ containing a value of this type.
         public static final int notification_template_media_custom=0x7f040035;
         public static final int notification_template_part_chronometer=0x7f040036;
         public static final int notification_template_part_time=0x7f040037;
-        public static final int select_dialog_item_material=0x7f040038;
-        public static final int select_dialog_multichoice_material=0x7f040039;
-        public static final int select_dialog_singlechoice_material=0x7f04003a;
-        public static final int support_simple_spinner_dropdown_item=0x7f04003b;
-        public static final int tooltip=0x7f04003c;
+        public static final int questions_layout=0x7f040038;
+        public static final int select_dialog_item_material=0x7f040039;
+        public static final int select_dialog_multichoice_material=0x7f04003a;
+        public static final int select_dialog_singlechoice_material=0x7f04003b;
+        public static final int start_layout=0x7f04003c;
+        public static final int support_simple_spinner_dropdown_item=0x7f04003d;
+        public static final int tooltip=0x7f04003e;
     }
     public static final class mipmap {
         public static final int ic_launcher=0x7f030000;
