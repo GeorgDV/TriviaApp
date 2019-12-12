@@ -37,7 +37,9 @@ namespace TriviaApp
                 string category = "";
                 string type = "";
                 if (inputAmount.Text != "")
-                    amount ="amount=" + inputAmount.Text;
+                    amount = "amount=" + inputAmount.Text;
+                else
+                    amount = "amount=10";
                 if (inputDifficulty.Text != "")
                     difficulty = "&difficulty=" + inputDifficulty.Text;
                 if (inputCategory.Text != "")

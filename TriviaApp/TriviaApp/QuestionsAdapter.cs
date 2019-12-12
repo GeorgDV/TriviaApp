@@ -7,6 +7,7 @@ using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Runtime;
+using Android.Text;
 using Android.Views;
 using Android.Widget;
 using TriviaApp.Core.Models;
@@ -45,22 +46,23 @@ namespace TriviaApp
 
             View view = convertView;
 
+            //TODO - MAKE IT SO THAT ALL TEXT VALUE ON QUESTION CARD WILL SHOW AS STYLED OR NOT STYLED AT ALL (DECODE JSON TO UTF8)
+
             if (view == null)
                 view = _context.LayoutInflater.Inflate(Resource.Layout.Questions_Row_Layout, null);
 
             view.FindViewById<TextView>(Resource.Id.textViewQuestion).Text = item.Question;
 
             List<string> Answers = new List<string>();
+            //ADD ALL QUESTION ANSWERS TO A LIST
             Answers.Add(item.Correct_Answer);
-            if (item.Incorrect_Answers.Length >= 3)
+            for (int i = 0; i < item.Incorrect_Answers.Length; i++)
             {
-                for (int i = 0; i < item.Incorrect_Answers.Length; i++)
-                {
-                    Answers.Add(item.Incorrect_Answers[i]);
-                }
+                Answers.Add(item.Incorrect_Answers[i]);
             }
 
-            if (Answers.Count >= 4)
+            //CHECK IF QUESTION IS MULTIPLE CHOICE OR YES/NO
+            if (item.Type == "multiple")
             {
                 view.FindViewById<Button>(Resource.Id.answer1Btn).Text = Answers[0];
                 view.FindViewById<Button>(Resource.Id.answer2Btn).Text = Answers[1];
@@ -70,7 +72,7 @@ namespace TriviaApp
             else
             {
                 view.FindViewById<Button>(Resource.Id.answer1Btn).Text = Answers[0];
-                view.FindViewById<Button>(Resource.Id.answer2Btn).Text = Answers[0];
+                view.FindViewById<Button>(Resource.Id.answer2Btn).Text = Answers[1];
                 view.FindViewById<Button>(Resource.Id.answer3Btn).Visibility = ViewStates.Gone;
                 view.FindViewById<Button>(Resource.Id.answer4Btn).Visibility = ViewStates.Gone;
             }

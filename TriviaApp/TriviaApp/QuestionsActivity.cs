@@ -5,11 +5,13 @@ using System.Text;
 
 using Android.App;
 using Android.Content;
+using Android.Graphics;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using TriviaApp.Core;
+using static Android.Widget.AdapterView;
 
 namespace TriviaApp
 {
@@ -28,6 +30,19 @@ namespace TriviaApp
 
             var data = await DataServiceQuestions.GetQuestions(queryString);
             questionsListView.Adapter = new QuestionsAdapter(this, data.Results);
+
+            questionsListView.ItemClick += (object sender, ItemClickEventArgs e) =>
+            {
+                //var clickPostitionText = moviesListView.GetItemAtPosition(e.Position); // Show text
+                //var clickPostitionID = Convert.ToString(e.Position); // Show index
+                var button = questionsListView.GetItemAtPosition(e.Position);
+                var questionDetails = data.Results[e.Position];
+                string CorrectAnswer = data.Results[e.Position].Correct_Answer;
+
+                //DOES NOT WORK, WORK TODO
+
+
+            };
         }
     }
 }

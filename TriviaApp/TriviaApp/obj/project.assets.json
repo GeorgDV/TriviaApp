@@ -535,20 +535,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Opilane\\.nuget\\packages\\": {}
+    "C:\\Users\\opilane\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Opilane\\Desktop\\TriviaApp\\TriviaApp\\TriviaApp\\TriviaApp.csproj",
+      "projectUniqueName": "C:\\Users\\opilane\\Desktop\\TriviaApp\\TriviaApp\\TriviaApp\\TriviaApp.csproj",
       "projectName": "TriviaApp",
-      "projectPath": "C:\\Users\\Opilane\\Desktop\\TriviaApp\\TriviaApp\\TriviaApp\\TriviaApp.csproj",
-      "packagesPath": "C:\\Users\\Opilane\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Opilane\\Desktop\\TriviaApp\\TriviaApp\\TriviaApp\\obj\\",
+      "projectPath": "C:\\Users\\opilane\\Desktop\\TriviaApp\\TriviaApp\\TriviaApp\\TriviaApp.csproj",
+      "packagesPath": "C:\\Users\\opilane\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\opilane\\Desktop\\TriviaApp\\TriviaApp\\TriviaApp\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "C:\\Users\\Opilane\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\opilane\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -561,8 +561,8 @@
       "frameworks": {
         "monoandroid81": {
           "projectReferences": {
-            "C:\\Users\\Opilane\\Desktop\\TriviaApp\\TriviaApp\\TriviaApp.Core\\TriviaApp.Core.csproj": {
-              "projectPath": "C:\\Users\\Opilane\\Desktop\\TriviaApp\\TriviaApp\\TriviaApp.Core\\TriviaApp.Core.csproj"
+            "C:\\Users\\opilane\\Desktop\\TriviaApp\\TriviaApp\\TriviaApp.Core\\TriviaApp.Core.csproj": {
+              "projectPath": "C:\\Users\\opilane\\Desktop\\TriviaApp\\TriviaApp\\TriviaApp.Core\\TriviaApp.Core.csproj"
             }
           }
         }
