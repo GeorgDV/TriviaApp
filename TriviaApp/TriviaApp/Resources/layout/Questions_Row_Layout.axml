@@ -4,68 +4,93 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
 	android:gravity="center_horizontal"
-	android:background="@color/DarkGreen">
-
-	<TextView
-		android:text="Question"
-		android:textSize="45px"
-		android:textColor="@color/MainTextGreen"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:id="@+id/textViewQuestion"/>
+	android:background="@color/MainThemeGreen">
 
 	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
 	android:gravity="center_horizontal"
-	android:background="@color/DarkGreen">
+	android:background="@color/QuestionBackgroundDarker"
+	android:layout_marginTop="25px">
 
-		<Button
-		android:text="Answer 1"
-		android:textColor="@color/MainTextGreen"
-		android:backgroundTint="@color/DarkGreen"
-		android:layout_width="wrap_content"
+		<TextView
+			android:text="Question"
+			android:textSize="50px"
+			android:textColor="@color/MainTextGreen"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/textViewQuestion"/>
+
+		<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:id="@+id/answer1Btn"
-	    android:textSize="45px"
-		android:layout_margin="10px"/>
-		<Button
-		android:text="Answer 2"
-		android:textColor="@color/MainTextGreen"
-		android:backgroundTint="@color/DarkGreen"
-		android:layout_width="wrap_content"
+		android:gravity="center_horizontal"
+		android:background="@color/QuestionBackgroundLighter">
+
+			<Button
+			android:text="Answer 1"
+			android:textColor="@color/MainTextGreen"
+			android:backgroundTint="@color/AnswerButtonColor"
+			android:layout_width="250px"
+			android:layout_height="wrap_content"
+			android:id="@+id/answer1Btn"
+			android:textSize="36px"
+			android:layout_marginTop="10px"
+			android:layout_marginLeft="10px"
+			android:layout_marginRight="50px"
+			android:layout_marginBottom="10px"/>
+			<Button
+			android:text="Answer 2"
+			android:textColor="@color/MainTextGreen"
+			android:backgroundTint="@color/AnswerButtonColor"
+			android:layout_width="250px"
+			android:layout_height="wrap_content"
+			android:id="@+id/answer2Btn"
+			android:textSize="36px"
+			android:layout_marginTop="10px"
+			android:layout_marginLeft="50px"
+			android:layout_marginRight="10px"
+			android:layout_marginBottom="10px"/>
+		</LinearLayout>
+
+		<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:id="@+id/answer2Btn"
-	    android:textSize="45px"
-		android:layout_margin="10px"/>
+		android:gravity="center_horizontal"
+		android:background="@color/QuestionBackgroundLighter"
+			>
+			<Button
+			android:text="Answer 3"
+			android:textColor="@color/MainTextGreen"
+			android:backgroundTint="@color/AnswerButtonColor"
+			android:layout_width="250px"
+			android:layout_height="wrap_content"
+			android:id="@+id/answer3Btn"
+			android:textSize="36px"
+			android:layout_marginTop="10px"
+			android:layout_marginLeft="10px"
+			android:layout_marginRight="50px"
+			android:layout_marginBottom="10px"/>
+			<Button
+			android:text="Answer 4"
+			android:textColor="@color/MainTextGreen"
+			android:backgroundTint="@color/AnswerButtonColor"
+			android:layout_width="250px"
+			android:layout_height="wrap_content"
+			android:id="@+id/answer4Btn"
+			android:textSize="36px"
+			android:layout_marginTop="10px"
+			android:layout_marginLeft="50px"
+			android:layout_marginRight="10px"
+			android:layout_marginBottom="10px"/>
+		</LinearLayout>
+
+
 	</LinearLayout>
 
-	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-	android:gravity="center_horizontal"
-	android:background="@color/DarkGreen">
-		<Button
-		android:text="Answer 3"
-		android:textColor="@color/MainTextGreen"
-		android:backgroundTint="@color/DarkGreen"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:id="@+id/answer3Btn"
-	    android:textSize="45px"
-		android:layout_margin="10px"/>
-		<Button
-		android:text="Answer 4"
-		android:textColor="@color/MainTextGreen"
-		android:backgroundTint="@color/DarkGreen"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:id="@+id/answer4Btn"
-	    android:textSize="45px"
-		android:layout_margin="10px"/>
-	</LinearLayout>
 
 	
 

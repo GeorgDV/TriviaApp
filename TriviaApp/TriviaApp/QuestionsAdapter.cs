@@ -51,10 +51,13 @@ namespace TriviaApp
             view.FindViewById<TextView>(Resource.Id.textViewQuestion).Text = item.Question;
 
             List<string> Answers = new List<string>();
-            Answers.Add(item.CorrectAnswer);
-            for (int i = 0; i < item.IncorrectAnswers.Length; i++)
+            Answers.Add(item.Correct_Answer);
+            if (item.Incorrect_Answers.Length >= 3)
             {
-                Answers.Add(item.IncorrectAnswers[i]);
+                for (int i = 0; i < item.Incorrect_Answers.Length; i++)
+                {
+                    Answers.Add(item.Incorrect_Answers[i]);
+                }
             }
 
             if (Answers.Count >= 4)

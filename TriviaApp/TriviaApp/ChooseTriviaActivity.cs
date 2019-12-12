@@ -30,7 +30,7 @@ namespace TriviaApp
             var inputType = FindViewById<EditText>(Resource.Id.inputQuestionType);
 
 
-            beginButton.Click += async delegate
+            beginButton.Click +=  delegate
             {
                 string amount = "";
                 string difficulty = "";

@@ -1265,6 +1265,9 @@ namespace TriviaApp
 			// aapt resource value: 0x7F06001A
 			public const int accent_material_light = 2131099674;
 			
+			// aapt resource value: 0x7F040010
+			public const int AnswerButtonColor = 2130968592;
+			
 			// aapt resource value: 0x7F06001B
 			public const int background_floating_material_dark = 2131099675;
 			
@@ -1373,8 +1376,8 @@ namespace TriviaApp
 			// aapt resource value: 0x7F06003A
 			public const int highlighted_text_material_light = 2131099706;
 			
-			// aapt resource value: 0x7F040008
-			public const int ic_launcher_background = 2130968584;
+			// aapt resource value: 0x7F040011
+			public const int ic_launcher_background = 2130968593;
 			
 			// aapt resource value: 0x7F040006
 			public const int MainTextGreen = 2130968582;
@@ -1450,6 +1453,12 @@ namespace TriviaApp
 			
 			// aapt resource value: 0x7F060051
 			public const int primary_text_disabled_material_light = 2131099729;
+			
+			// aapt resource value: 0x7F040008
+			public const int QuestionBackgroundDarker = 2130968584;
+			
+			// aapt resource value: 0x7F040009
+			public const int QuestionBackgroundLighter = 2130968585;
 			
 			// aapt resource value: 0x7F060052
 			public const int ripple_material_dark = 2131099730;

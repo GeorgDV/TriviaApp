@@ -27,7 +27,7 @@ namespace TriviaApp
             string queryString = Intent.GetStringExtra("querystring").ToString();
 
             var data = await DataServiceQuestions.GetQuestions(queryString);
-            questionsListView.Adapter = new QuestionsAdapter(this, data.Details);
+            questionsListView.Adapter = new QuestionsAdapter(this, data.Results);
         }
     }
 }
