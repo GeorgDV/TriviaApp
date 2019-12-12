@@ -28,7 +28,7 @@ namespace TriviaApp
             var inputDifficulty = FindViewById<EditText>(Resource.Id.inputQuestionDifficulty); 
             var inputCategory = FindViewById<EditText>(Resource.Id.inputQuestionCategory);
             var inputType = FindViewById<EditText>(Resource.Id.inputQuestionType);
-            var questionsListView = FindViewById<ListView>(Resource.Id.questionsListView);
+
 
             beginButton.Click += async delegate
             {
@@ -37,18 +37,17 @@ namespace TriviaApp
                 string category = "";
                 string type = "";
                 if (inputAmount.Text != "")
-                    amount ="amount=" + inputAmount.Text + "&";
+                    amount ="amount=" + inputAmount.Text;
                 if (inputDifficulty.Text != "")
-                    difficulty = "difficulty=" + inputDifficulty.Text + "&";
+                    difficulty = "&difficulty=" + inputDifficulty.Text;
                 if (inputCategory.Text != "")
-                    category = "category=" + inputCategory.Text + "&";
+                    category = "&category=" + inputCategory.Text;
                 if (inputType.Text != "")
-                    type = "type=" + inputType.Text;
-                string queryString = "https://opentdb.com/api_config.php?" + amount + difficulty + category + type;
-                var data = await DataServiceQuestions.GetQuestions(queryString);
-                questionsListView.Adapter = new QuestionsAdapter(this, data.Details);
+                    type = "&type=" + inputType.Text;
+                string queryString = "https://opentdb.com/api.php?" + amount + difficulty + category + type;
                 var intent = new Intent(this, typeof(QuestionsActivity));
-                this.StartActivity(intent);
+                intent.PutExtra("querystring", queryString);
+                StartActivity(intent);
             };
         }
     }

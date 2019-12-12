@@ -67,7 +67,7 @@ namespace TriviaApp
             else
             {
                 view.FindViewById<Button>(Resource.Id.answer1Btn).Text = Answers[0];
-                view.FindViewById<Button>(Resource.Id.answer2Btn).Text = Answers[1];
+                view.FindViewById<Button>(Resource.Id.answer2Btn).Text = Answers[0];
                 view.FindViewById<Button>(Resource.Id.answer3Btn).Visibility = ViewStates.Gone;
                 view.FindViewById<Button>(Resource.Id.answer4Btn).Visibility = ViewStates.Gone;
             }
