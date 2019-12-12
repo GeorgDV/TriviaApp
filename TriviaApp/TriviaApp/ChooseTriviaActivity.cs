@@ -47,6 +47,8 @@ namespace TriviaApp
                 string queryString = "https://opentdb.com/api_config.php?" + amount + difficulty + category + type;
                 var data = await DataServiceQuestions.GetQuestions(queryString);
                 questionsListView.Adapter = new QuestionsAdapter(this, data.Details);
+                var intent = new Intent(this, typeof(QuestionsActivity));
+                this.StartActivity(intent);
             };
         }
     }
