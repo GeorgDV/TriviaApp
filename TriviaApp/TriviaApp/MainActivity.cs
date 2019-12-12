@@ -34,7 +34,7 @@ namespace TriviaApp
 
         private void StartButton_click(object sender, EventArgs e)
         {
-            var intent = new Intent(this, typeof(StartActivity));
+            var intent = new Intent(this, typeof(ChooseTriviaActivity));
             this.StartActivity(intent);
         }
     }

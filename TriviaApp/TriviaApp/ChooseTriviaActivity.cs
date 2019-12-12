@@ -14,11 +14,12 @@ using TriviaApp.Core;
 namespace TriviaApp
 {
     [Activity(Label = "StartActivity")]
-    public class StartActivity : Activity
+    public class ChooseTriviaActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+            SetContentView(Resource.Layout.ChooseTrivia_Layout);
 
             // Create your application here
 
@@ -27,7 +28,7 @@ namespace TriviaApp
             var inputDifficulty = FindViewById<EditText>(Resource.Id.inputQuestionDifficulty); 
             var inputCategory = FindViewById<EditText>(Resource.Id.inputQuestionCategory);
             var inputType = FindViewById<EditText>(Resource.Id.inputQuestionType);
-            //var questionsListView = FindViewById<ListView>(Resource.Id.questionsListView);
+            var questionsListView = FindViewById<ListView>(Resource.Id.questionsListView);
 
             beginButton.Click += async delegate
             {
@@ -45,7 +46,7 @@ namespace TriviaApp
                     type = "type=" + inputType.Text;
                 string queryString = "https://opentdb.com/api_config.php?" + amount + difficulty + category + type;
                 var data = await DataServiceQuestions.GetQuestions(queryString);
-               // questionsListView.Adapter = new StarWarsPlanetsAdapter(this, data.Results);
+                questionsListView.Adapter = new QuestionsAdapter(this, data.Details);
             };
         }
     }

@@ -7,7 +7,7 @@ namespace TriviaApp.Core.Models
     public partial class Question
     {
         public long ResponseCode { get; set; }
-        public QuestionDetails[] Details { get; set; }
+        public List<QuestionDetails> Details { get; set; }
     }
 
     public partial class QuestionDetails

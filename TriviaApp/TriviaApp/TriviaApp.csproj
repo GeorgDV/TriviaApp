@@ -60,7 +60,7 @@
     <Compile Include="QuestionsAdapter.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StartActivity.cs" />
+    <Compile Include="ChooseTriviaActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -106,7 +106,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\Start_Layout.axml">
+    <AndroidResource Include="Resources\layout\ChooseTrivia_Layout.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
