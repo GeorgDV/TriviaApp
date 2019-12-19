@@ -24,10 +24,40 @@ namespace TriviaApp
             // Create your application here
 
             var beginButton = FindViewById<Button>(Resource.Id.beginButton);
-            var inputAmount = FindViewById<EditText>(Resource.Id.inputQuestionAmount);
-            var inputDifficulty = FindViewById<EditText>(Resource.Id.inputQuestionDifficulty); 
-            var inputCategory = FindViewById<EditText>(Resource.Id.inputQuestionCategory);
-            var inputType = FindViewById<EditText>(Resource.Id.inputQuestionType);
+            var inputAmount = FindViewById<Spinner>(Resource.Id.spinnerInputAmount);
+            var inputDifficulty = FindViewById<Spinner>(Resource.Id.spinnerInputDifficulty); 
+            var inputCategory = FindViewById<Spinner>(Resource.Id.spinnerInputCategory);
+            var inputType = FindViewById<Spinner>(Resource.Id.spinnerInputType);
+
+
+            inputAmount.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(spinner_ItemSelected);
+            var amountAdapter = ArrayAdapter.CreateFromResource(
+                    this, Resource.Array.amount_array, Android.Resource.Layout.SimpleSpinnerItem);
+            amountAdapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
+            inputAmount.Adapter = amountAdapter;
+
+
+            inputDifficulty.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(spinner_ItemSelected);
+            var difficultyAdapter = ArrayAdapter.CreateFromResource(
+                    this, Resource.Array.difficulty_array, Android.Resource.Layout.SimpleSpinnerItem);
+            difficultyAdapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
+            inputDifficulty.Adapter = difficultyAdapter;
+
+
+            inputCategory.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(spinner_ItemSelected);
+            var categoryAdapter = ArrayAdapter.CreateFromResource(
+                    this, Resource.Array.category_array, Android.Resource.Layout.SimpleSpinnerItem);
+            categoryAdapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
+            inputCategory.Adapter = categoryAdapter;
+
+
+            inputType.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(spinner_ItemSelected);
+            var typeAdapter = ArrayAdapter.CreateFromResource(
+                    this, Resource.Array.type_array, Android.Resource.Layout.SimpleSpinnerItem);
+            typeAdapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
+            inputType.Adapter = typeAdapter;
+
+
 
 
             beginButton.Click +=  delegate
@@ -36,21 +66,27 @@ namespace TriviaApp
                 string difficulty = "";
                 string category = "";
                 string type = "";
-                if (inputAmount.Text != "")
-                    amount = "amount=" + inputAmount.Text;
+                if (inputAmount.SelectedItem.ToString() != "")
+                    amount = "amount=" + inputAmount.SelectedItem.ToString();
                 else
                     amount = "amount=10";
-                if (inputDifficulty.Text != "")
-                    difficulty = "&difficulty=" + inputDifficulty.Text;
-                if (inputCategory.Text != "")
-                    category = "&category=" + inputCategory.Text;
-                if (inputType.Text != "")
-                    type = "&type=" + inputType.Text;
+                if (inputDifficulty.SelectedItem.ToString() != "")
+                    difficulty = "&difficulty=" + inputDifficulty.SelectedItem.ToString();
+                if (inputCategory.SelectedItem.ToString() != "")
+                    category = "&category=" + inputCategory.SelectedItem.ToString();
+                if (inputType.SelectedItem.ToString() != "")
+                    type = "&type=" + inputType.SelectedItem.ToString();
                 string queryString = "https://opentdb.com/api.php?" + amount + difficulty + category + type;
                 var intent = new Intent(this, typeof(QuestionsActivity));
                 intent.PutExtra("querystring", queryString);
                 StartActivity(intent);
             };
+        }
+
+        private void spinner_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
+        {
+            Spinner spinner = (Spinner)sender;
+            string selectedAmount = spinner.GetItemAtPosition(e.Position).ToString();
         }
     }
 }

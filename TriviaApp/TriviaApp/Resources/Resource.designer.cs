@@ -105,6 +105,31 @@ namespace TriviaApp
 			}
 		}
 		
+		public partial class Array
+		{
+			
+			// aapt resource value: 0x7f0e0000
+			public const int amount_array = 2131623936;
+			
+			// aapt resource value: 0x7f0e0001
+			public const int category_array = 2131623937;
+			
+			// aapt resource value: 0x7f0e0002
+			public const int difficulty_array = 2131623938;
+			
+			// aapt resource value: 0x7f0e0003
+			public const int type_array = 2131623939;
+			
+			static Array()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Array()
+			{
+			}
+		}
+		
 		public partial class Attribute
 		{
 			
@@ -2594,18 +2619,6 @@ namespace TriviaApp
 			// aapt resource value: 0x7f0800af
 			public const int info = 2131230895;
 			
-			// aapt resource value: 0x7f08008f
-			public const int inputQuestionAmount = 2131230863;
-			
-			// aapt resource value: 0x7f080090
-			public const int inputQuestionCategory = 2131230864;
-			
-			// aapt resource value: 0x7f080091
-			public const int inputQuestionDifficulty = 2131230865;
-			
-			// aapt resource value: 0x7f080092
-			public const int inputQuestionType = 2131230866;
-			
 			// aapt resource value: 0x7f080059
 			public const int italic = 2131230809;
 			
@@ -2791,6 +2804,18 @@ namespace TriviaApp
 			
 			// aapt resource value: 0x7f080064
 			public const int spacer = 2131230820;
+			
+			// aapt resource value: 0x7f08008f
+			public const int spinnerInputAmount = 2131230863;
+			
+			// aapt resource value: 0x7f080090
+			public const int spinnerInputCategory = 2131230864;
+			
+			// aapt resource value: 0x7f080091
+			public const int spinnerInputDifficulty = 2131230865;
+			
+			// aapt resource value: 0x7f080092
+			public const int spinnerInputType = 2131230866;
 			
 			// aapt resource value: 0x7f080008
 			public const int split_action_bar = 2131230728;
@@ -3311,6 +3336,18 @@ namespace TriviaApp
 			
 			// aapt resource value: 0x7f090025
 			public const int path_password_strike_through = 2131296293;
+			
+			// aapt resource value: 0x7f090029
+			public const int qAmount_Prompt = 2131296297;
+			
+			// aapt resource value: 0x7f09002a
+			public const int qCategory_Prompt = 2131296298;
+			
+			// aapt resource value: 0x7f09002b
+			public const int qDifficulty_Prompt = 2131296299;
+			
+			// aapt resource value: 0x7f09002c
+			public const int qType_Prompt = 2131296300;
 			
 			// aapt resource value: 0x7f090011
 			public const int search_menu_title = 2131296273;

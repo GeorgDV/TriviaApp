@@ -29,6 +29,12 @@ public final class R {
     public static final class animator {
         public static final int design_appbar_state_list_animator=0x7f060000;
     }
+    public static final class array {
+        public static final int amount_array=0x7f0e0000;
+        public static final int category_array=0x7f0e0001;
+        public static final int difficulty_array=0x7f0e0002;
+        public static final int type_array=0x7f0e0003;
+    }
     public static final class attr {
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
@@ -3036,10 +3042,6 @@ containing a value of this type.
         public static final int ifRoom=0x7f08003a;
         public static final int image=0x7f08005f;
         public static final int info=0x7f0800af;
-        public static final int inputQuestionAmount=0x7f08008f;
-        public static final int inputQuestionCategory=0x7f080090;
-        public static final int inputQuestionDifficulty=0x7f080091;
-        public static final int inputQuestionType=0x7f080092;
         public static final int italic=0x7f080059;
         public static final int item_touch_helper_previous_elevation=0x7f080000;
         public static final int largeLabel=0x7f080095;
@@ -3102,6 +3104,10 @@ containing a value of this type.
         public static final int snackbar_text=0x7f08009a;
         public static final int snap=0x7f080043;
         public static final int spacer=0x7f080064;
+        public static final int spinnerInputAmount=0x7f08008f;
+        public static final int spinnerInputCategory=0x7f080090;
+        public static final int spinnerInputDifficulty=0x7f080091;
+        public static final int spinnerInputType=0x7f080092;
         public static final int split_action_bar=0x7f080008;
         public static final int src_atop=0x7f08002a;
         public static final int src_in=0x7f08002b;
@@ -3266,6 +3272,10 @@ containing a value of this type.
         public static final int path_password_eye_mask_strike_through=0x7f090023;
         public static final int path_password_eye_mask_visible=0x7f090024;
         public static final int path_password_strike_through=0x7f090025;
+        public static final int qAmount_Prompt=0x7f090029;
+        public static final int qCategory_Prompt=0x7f09002a;
+        public static final int qDifficulty_Prompt=0x7f09002b;
+        public static final int qType_Prompt=0x7f09002c;
         public static final int search_menu_title=0x7f090011;
         public static final int status_bar_notification_info_overflow=0x7f090026;
     }

@@ -15,6 +15,10 @@ int anim design_snackbar_out 0x7f05000d
 int anim tooltip_enter 0x7f05000e
 int anim tooltip_exit 0x7f05000f
 int animator design_appbar_state_list_animator 0x7f060000
+int array amount_array 0x7f0e0000
+int array category_array 0x7f0e0001
+int array difficulty_array 0x7f0e0002
+int array type_array 0x7f0e0003
 int attr actionBarDivider 0x7f010052
 int attr actionBarItemBackground 0x7f010053
 int attr actionBarPopupTheme 0x7f01004c
@@ -822,10 +826,6 @@ int id icon_group 0x7f0800b3
 int id ifRoom 0x7f08003a
 int id image 0x7f08005f
 int id info 0x7f0800af
-int id inputQuestionAmount 0x7f08008f
-int id inputQuestionCategory 0x7f080090
-int id inputQuestionDifficulty 0x7f080091
-int id inputQuestionType 0x7f080092
 int id italic 0x7f080059
 int id item_touch_helper_previous_elevation 0x7f080000
 int id largeLabel 0x7f080095
@@ -888,6 +888,10 @@ int id snackbar_action 0x7f08009b
 int id snackbar_text 0x7f08009a
 int id snap 0x7f080043
 int id spacer 0x7f080064
+int id spinnerInputAmount 0x7f08008f
+int id spinnerInputCategory 0x7f080090
+int id spinnerInputDifficulty 0x7f080091
+int id spinnerInputType 0x7f080092
 int id split_action_bar 0x7f080008
 int id src_atop 0x7f08002a
 int id src_in 0x7f08002b
@@ -1044,6 +1048,10 @@ int string path_password_eye 0x7f090022
 int string path_password_eye_mask_strike_through 0x7f090023
 int string path_password_eye_mask_visible 0x7f090024
 int string path_password_strike_through 0x7f090025
+int string qAmount_Prompt 0x7f090029
+int string qCategory_Prompt 0x7f09002a
+int string qDifficulty_Prompt 0x7f09002b
+int string qType_Prompt 0x7f09002c
 int string search_menu_title 0x7f090011
 int string status_bar_notification_info_overflow 0x7f090026
 int style AlertDialog_AppCompat 0x7f0a0095
