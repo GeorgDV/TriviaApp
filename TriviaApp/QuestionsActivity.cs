@@ -22,7 +22,6 @@ namespace TriviaApp
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.Questions_Layout);
-            // Create your application here
 
             var questionsListView = FindViewById<ListView>(Resource.Id.questionsListView);
 
