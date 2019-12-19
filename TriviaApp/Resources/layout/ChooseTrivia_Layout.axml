@@ -28,7 +28,10 @@
         android:id="@+id/spinnerInputAmount"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:prompt="@string/qAmount_Prompt"/>
+        android:prompt="@string/qAmount_Prompt"
+	    android:layout_marginTop="10px"
+	    android:textAlignment="center"
+	    android:spinnerMode="dialog"/>
 
 	<TextView
 		android:text="Category"
@@ -36,13 +39,17 @@
 		android:textColor="@color/MainTextGreen"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:id="@+id/textViewStart"/>
+		android:id="@+id/textViewStart"
+	    android:layout_marginTop="20px"/>
 
 	<Spinner
         android:id="@+id/spinnerInputCategory"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:prompt="@string/qCategory_Prompt"/>
+        android:prompt="@string/qCategory_Prompt"
+		android:layout_marginTop="10px"
+	    android:textAlignment="center"
+	    android:spinnerMode="dialog"/>
 
 	<TextView
 		android:text="Difficulty"
@@ -50,14 +57,17 @@
 		android:textColor="@color/MainTextGreen"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:id="@+id/textViewStart"/>
+		android:id="@+id/textViewStart"
+		android:layout_marginTop="20px"/>
 
 	<Spinner
         android:id="@+id/spinnerInputDifficulty"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:prompt="@string/qDifficulty_Prompt"
-	    android:layout_marginTop="100px"/>
+		android:layout_marginTop="10px"
+		android:textAlignment="center"
+	    android:spinnerMode="dialog"/>
 
 	<TextView
 		android:text="Type"
@@ -65,13 +75,17 @@
 		android:textColor="@color/MainTextGreen"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:id="@+id/textViewStart"/>
+		android:id="@+id/textViewStart"
+		android:layout_marginTop="20px"/>
 
 	<Spinner
         android:id="@+id/spinnerInputType"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:prompt="@string/qType_Prompt"/>
+        android:prompt="@string/qType_Prompt"
+		android:layout_marginTop="10px"
+		android:textAlignment="center"
+	    android:spinnerMode="dialog"/>
 
 
 	<Button

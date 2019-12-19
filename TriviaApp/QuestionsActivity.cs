@@ -31,6 +31,18 @@ namespace TriviaApp
             var data = await DataServiceQuestions.GetQuestions(queryString);
             questionsListView.Adapter = new QuestionsAdapter(this, data.Results);
 
+            if (data.Response_Code.ToString() != "0")
+            {
+                Context context = Application.Context;
+                string text = "Serverside Error. Please check your query.";
+                ToastLength duration = ToastLength.Short;
+
+                var toast = Toast.MakeText(context, text, duration);
+                toast.Show();
+                var intent = new Intent(this, typeof(ChooseTriviaActivity));
+                this.StartActivity(intent);
+            }
+
             questionsListView.ItemClick += (object sender, ItemClickEventArgs e) =>
             {
                 //var clickPostitionText = moviesListView.GetItemAtPosition(e.Position); // Show text

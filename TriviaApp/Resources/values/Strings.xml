@@ -2,7 +2,6 @@
     <string name="app_name">TriviaApp</string>
     <string name="action_settings">Settings</string>
 
-  <string name="app_name">AmountSpinner</string>
   <string name="qAmount_Prompt">Choose Amount</string>
   <string-array name="amount_array">
     <item>10</item>
@@ -11,7 +10,6 @@
     <item>25</item>
   </string-array>
 
-  <string name="app_name">CategorySpinner</string>
   <string name="qCategory_Prompt">Choose Category</string>
   <string-array name="category_array">
     <item>General Knowledge</item>
@@ -40,7 +38,6 @@
     <item>Entertainement: Cartoon and Animations</item>
   </string-array>
 
-  <string name="app_name">DifficultySpinner</string>
   <string name="qDifficulty_Prompt">Choose Difficulty</string>
   <string-array name="difficulty_array">
     <item>Easy</item>
@@ -48,7 +45,6 @@
     <item>Hard</item>
   </string-array>
 
-  <string name="app_name">TypeSpinner</string>
   <string name="qType_Prompt">Choose Type</string>
   <string-array name="type_array">
     <item>Multiple Choice</item>
