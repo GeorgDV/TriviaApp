@@ -24,12 +24,10 @@ namespace TriviaApp
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.Questions_Layout);
 
-            var questionsListView = FindViewById<ListView>(Resource.Id.questionsListView);
-
             string queryString = Intent.GetStringExtra("querystring").ToString();
-
-
             var data = await DataServiceQuestions.GetQuestions(queryString);
+
+            var questionsListView = FindViewById<ListView>(Resource.Id.questionsListView);
             questionsListView.Adapter = new QuestionsAdapter(this, data.Results);
 
             if (data.Response_Code.ToString() != "0")
@@ -43,18 +41,6 @@ namespace TriviaApp
                 var intent = new Intent(this, typeof(ChooseTriviaActivity));
                 this.StartActivity(intent);
             }
-
-            //questionsListView.ItemClick += (object sender, ItemClickEventArgs e) =>
-            //{
-            //    //var clickPostitionText = moviesListView.GetItemAtPosition(e.Position); // Show text
-            //    //var clickPostitionID = Convert.ToString(e.Position); // Show index 
-            //    var questionDetails = data.Results[e.Position];
-            //    string CorrectAnswer = data.Results[e.Position].Correct_Answer;
-
-
-
-
-            //};
         }
     }
 }

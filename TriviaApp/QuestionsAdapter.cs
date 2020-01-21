@@ -5,6 +5,7 @@ using System.Text;
 
 using Android.App;
 using Android.Content;
+using Android.Graphics;
 using Android.OS;
 using Android.Runtime;
 using Android.Text;
@@ -58,17 +59,25 @@ namespace TriviaApp
             var button2 = view.FindViewById<Button>(Resource.Id.answer2Btn);
             var button3 = view.FindViewById<Button>(Resource.Id.answer3Btn);
             var button4 = view.FindViewById<Button>(Resource.Id.answer4Btn);
+            button1.Click -= ListView_ItemClick;
+            button2.Click -= ListView_ItemClick;
+            button3.Click -= ListView_ItemClick;
+            button4.Click -= ListView_ItemClick;
+            //button1.Tag = position;
+            //button2.Tag = position;
+            //button3.Tag = position;
+            //button4.Tag = position;
 
-            var listView = view.FindViewById<ListView>(Resource.Id.questionsListView);
+            var questionsListView = view.FindViewById<ListView>(Resource.Id.questionsListView);
+
 
             List<string> Answers = new List<string>();
             //ADD ALL QUESTION ANSWERS TO A LIST
             Answers.Add(item.Correct_Answer);
-            for (int i = 0; i < item.Incorrect_Answers.Length; i++)
+            foreach (string answer in item.Incorrect_Answers)
             {
-                Answers.Add(item.Incorrect_Answers[i]);
+                Answers.Add(answer);
             }
-
 
             Random rng = new Random();
             //SHUFFLE ANSWERS
@@ -89,47 +98,63 @@ namespace TriviaApp
             view.FindViewById<Button>(Resource.Id.answer4Btn).Visibility = ViewStates.Visible;
 
             //CHECK HOW MANY ANSWERS ARE
-            if (Answers.Count == 4)
+            if (item.Type == "multiple" && Answers.Count == 4)
             {
                 view.FindViewById<Button>(Resource.Id.answer1Btn).Text = Answers[0];
                 view.FindViewById<Button>(Resource.Id.answer2Btn).Text = Answers[1];
                 view.FindViewById<Button>(Resource.Id.answer3Btn).Text = Answers[2];
                 view.FindViewById<Button>(Resource.Id.answer4Btn).Text = Answers[3];
             }
-            else if (Answers.Count == 3)
+            //else if (Answers.Count == 3)
+            //{
+            //    view.FindViewById<Button>(Resource.Id.answer1Btn).Text = Answers[0];
+            //    view.FindViewById<Button>(Resource.Id.answer2Btn).Text = Answers[1];
+            //    view.FindViewById<Button>(Resource.Id.answer3Btn).Text = Answers[2];
+            //    view.FindViewById<Button>(Resource.Id.answer4Btn).Visibility = ViewStates.Gone;
+            //}
+            else if ( item.Type == "boolean" && Answers.Count == 2)
             {
-                view.FindViewById<Button>(Resource.Id.answer1Btn).Text = Answers[0];
-                view.FindViewById<Button>(Resource.Id.answer2Btn).Text = Answers[1];
-                view.FindViewById<Button>(Resource.Id.answer3Btn).Text = Answers[2];
-                view.FindViewById<Button>(Resource.Id.answer4Btn).Visibility = ViewStates.Gone;
-            }
-            else if (Answers.Count == 2)
-            {
-                view.FindViewById<Button>(Resource.Id.answer1Btn).Text = Answers[0];
-                view.FindViewById<Button>(Resource.Id.answer2Btn).Text = Answers[1];
+                view.FindViewById<Button>(Resource.Id.answer1Btn).Text = "True";
+                view.FindViewById<Button>(Resource.Id.answer2Btn).Text = "False";
                 view.FindViewById<Button>(Resource.Id.answer3Btn).Visibility = ViewStates.Gone;
                 view.FindViewById<Button>(Resource.Id.answer4Btn).Visibility = ViewStates.Gone;
             }
 
-            listView.ItemClick += ListItemClicked;
-
-
-            Answers.Clear();
+            button1.Click += ListView_ItemClick;
+            button2.Click += ListView_ItemClick;
+            button3.Click += ListView_ItemClick;
+            button4.Click += ListView_ItemClick;
             return view;
+
+            void ListView_ItemClick(object sender, EventArgs e)
+            {
+                int btnPosition = (int)((Button)sender).Tag;
+                var selectedButton = (Button)sender;
+                string selectedAnswer = selectedButton.Text;
+                string correctAnswer = item.Correct_Answer;
+                Context context = Application.Context;
+                ToastLength duration = ToastLength.Short;
+                
+                if (selectedAnswer == correctAnswer)
+                {
+                    string text = correctAnswer + " -> Correct!";
+                    var toast = Toast.MakeText(context, text, duration);
+                    toast.Show();
+                    selectedButton.HighlightColor.Equals(Color.DarkGreen);
+                    selectedButton.Clickable = false;
+                }
+                else
+                {
+                    string text = "Incorrect! Correct -> " + correctAnswer;
+                    var toast = Toast.MakeText(context, text, duration);
+                    toast.Show();
+                    selectedButton.HighlightColor.Equals(Color.Red);
+                    selectedButton.Clickable = false;
+                }
+
+            }
         }
 
-        private void ListItemClicked(object sender, ItemClickEventArgs e)
-        {
-            //you can get the item with the position var item = myList[e]; }
-            //var questionDetails = data.Results[e.Position];
-            //string CorrectAnswer = data.Results[e.Position].Correct_Answer;
 
-            Context context = Application.Context;
-            string text = "Button clicked";
-            ToastLength duration = ToastLength.Short;
-
-            var toast = Toast.MakeText(context, text, duration);
-            toast.Show();
-        }
     }
 }
