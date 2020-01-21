@@ -11,6 +11,7 @@ using Android.Text;
 using Android.Views;
 using Android.Widget;
 using TriviaApp.Core.Models;
+using static Android.Widget.AdapterView;
 
 namespace TriviaApp
 {
@@ -52,6 +53,13 @@ namespace TriviaApp
                 view = _context.LayoutInflater.Inflate(Resource.Layout.Questions_Row_Layout, null);
 
             view.FindViewById<TextView>(Resource.Id.textViewQuestion).Text = item.Question;
+
+            var button1 = view.FindViewById<Button>(Resource.Id.answer1Btn);
+            var button2 = view.FindViewById<Button>(Resource.Id.answer2Btn);
+            var button3 = view.FindViewById<Button>(Resource.Id.answer3Btn);
+            var button4 = view.FindViewById<Button>(Resource.Id.answer4Btn);
+
+            var listView = view.FindViewById<ListView>(Resource.Id.questionsListView);
 
             List<string> Answers = new List<string>();
             //ADD ALL QUESTION ANSWERS TO A LIST
@@ -102,8 +110,26 @@ namespace TriviaApp
                 view.FindViewById<Button>(Resource.Id.answer3Btn).Visibility = ViewStates.Gone;
                 view.FindViewById<Button>(Resource.Id.answer4Btn).Visibility = ViewStates.Gone;
             }
+
+            listView.ItemClick += ListItemClicked;
+
+
             Answers.Clear();
             return view;
+        }
+
+        private void ListItemClicked(object sender, ItemClickEventArgs e)
+        {
+            //you can get the item with the position var item = myList[e]; }
+            //var questionDetails = data.Results[e.Position];
+            //string CorrectAnswer = data.Results[e.Position].Correct_Answer;
+
+            Context context = Application.Context;
+            string text = "Button clicked";
+            ToastLength duration = ToastLength.Short;
+
+            var toast = Toast.MakeText(context, text, duration);
+            toast.Show();
         }
     }
 }

@@ -11,6 +11,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using TriviaApp.Core;
+using TriviaApp.Core.Models;
 using static Android.Widget.AdapterView;
 
 namespace TriviaApp
@@ -27,6 +28,7 @@ namespace TriviaApp
 
             string queryString = Intent.GetStringExtra("querystring").ToString();
 
+
             var data = await DataServiceQuestions.GetQuestions(queryString);
             questionsListView.Adapter = new QuestionsAdapter(this, data.Results);
 
@@ -42,18 +44,17 @@ namespace TriviaApp
                 this.StartActivity(intent);
             }
 
-            questionsListView.ItemClick += (object sender, ItemClickEventArgs e) =>
-            {
-                //var clickPostitionText = moviesListView.GetItemAtPosition(e.Position); // Show text
-                //var clickPostitionID = Convert.ToString(e.Position); // Show index
-                var button = questionsListView.GetItemAtPosition(e.Position);
-                var questionDetails = data.Results[e.Position];
-                string CorrectAnswer = data.Results[e.Position].Correct_Answer;
-
-                //DOES NOT WORK, WORK TODO
+            //questionsListView.ItemClick += (object sender, ItemClickEventArgs e) =>
+            //{
+            //    //var clickPostitionText = moviesListView.GetItemAtPosition(e.Position); // Show text
+            //    //var clickPostitionID = Convert.ToString(e.Position); // Show index 
+            //    var questionDetails = data.Results[e.Position];
+            //    string CorrectAnswer = data.Results[e.Position].Correct_Answer;
 
 
-            };
+
+
+            //};
         }
     }
 }
