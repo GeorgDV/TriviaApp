@@ -61,21 +61,48 @@ namespace TriviaApp
                 Answers.Add(item.Incorrect_Answers[i]);
             }
 
-            //CHECK IF QUESTION IS MULTIPLE CHOICE OR YES/NO
-            if (item.Type == "multiple")
+
+            Random rng = new Random();
+            //SHUFFLE ANSWERS
+            int n = Answers.Count;
+            while (n > 1)
+            {
+                n--;
+                int k = rng.Next(n + 1);
+                string value = Answers[k];
+                Answers[k] = Answers[n];
+                Answers[n] = value;
+            }
+
+            //MAKE SURE BUTTONS ARE VISIBLE
+            view.FindViewById<Button>(Resource.Id.answer1Btn).Visibility = ViewStates.Visible;
+            view.FindViewById<Button>(Resource.Id.answer2Btn).Visibility = ViewStates.Visible;
+            view.FindViewById<Button>(Resource.Id.answer3Btn).Visibility = ViewStates.Visible;
+            view.FindViewById<Button>(Resource.Id.answer4Btn).Visibility = ViewStates.Visible;
+
+            //CHECK HOW MANY ANSWERS ARE
+            if (Answers.Count == 4)
             {
                 view.FindViewById<Button>(Resource.Id.answer1Btn).Text = Answers[0];
                 view.FindViewById<Button>(Resource.Id.answer2Btn).Text = Answers[1];
                 view.FindViewById<Button>(Resource.Id.answer3Btn).Text = Answers[2];
                 view.FindViewById<Button>(Resource.Id.answer4Btn).Text = Answers[3];
             }
-            else
+            else if (Answers.Count == 3)
+            {
+                view.FindViewById<Button>(Resource.Id.answer1Btn).Text = Answers[0];
+                view.FindViewById<Button>(Resource.Id.answer2Btn).Text = Answers[1];
+                view.FindViewById<Button>(Resource.Id.answer3Btn).Text = Answers[2];
+                view.FindViewById<Button>(Resource.Id.answer4Btn).Visibility = ViewStates.Gone;
+            }
+            else if (Answers.Count == 2)
             {
                 view.FindViewById<Button>(Resource.Id.answer1Btn).Text = Answers[0];
                 view.FindViewById<Button>(Resource.Id.answer2Btn).Text = Answers[1];
                 view.FindViewById<Button>(Resource.Id.answer3Btn).Visibility = ViewStates.Gone;
                 view.FindViewById<Button>(Resource.Id.answer4Btn).Visibility = ViewStates.Gone;
             }
+            Answers.Clear();
             return view;
         }
     }
