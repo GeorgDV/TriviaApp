@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 	android:gravity="center_horizontal"
-	android:background="@color/MainThemeGreen">
+	android:background="@drawable/light_green_bg1">
 
 	<TextView
 		android:text="Choose Your Trivia"
@@ -13,79 +13,90 @@
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:id="@+id/textViewStart"
-	    android:layout_marginTop="50px"/>
+	    android:layout_marginTop="25px"
+		android:layout_marginBottom="25px"/>
 
-	<TextView
-		android:text="Amount"
-		android:textSize="45px"
-		android:textColor="@color/MainTextGreen"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:id="@+id/textViewStart"
-	    android:layout_marginTop="100px"/>
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="650px"
+	android:gravity="center_horizontal"
+	android:background="@drawable/green_bg2"
+	android:padding = "10px">
 
-	<Spinner
-        android:id="@+id/spinnerInputAmount"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:prompt="@string/qAmount_Prompt"
-	    android:layout_marginTop="10px"
-	    android:textAlignment="center"
-	    android:spinnerMode="dialog"/>
+		<TextView
+			android:text="Amount"
+			android:textSize="45px"
+			android:textColor="@color/MainTextGreen"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/textViewAmount"
+			android:layout_marginTop="50px"/>
 
-	<TextView
-		android:text="Category"
-		android:textSize="45px"
-		android:textColor="@color/MainTextGreen"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:id="@+id/textViewStart"
-	    android:layout_marginTop="20px"/>
+		<Spinner
+			android:id="@+id/spinnerInputAmount"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:prompt="@string/qAmount_Prompt"
+			android:layout_marginTop="10px"
+			android:textAlignment="center"
+			android:spinnerMode="dialog"/>
 
-	<Spinner
-        android:id="@+id/spinnerInputCategory"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:prompt="@string/qCategory_Prompt"
-		android:layout_marginTop="10px"
-	    android:textAlignment="center"
-	    android:spinnerMode="dialog"/>
+		<TextView
+			android:text="Category"
+			android:textSize="45px"
+			android:textColor="@color/MainTextGreen"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/textViewCategory"
+			android:layout_marginTop="20px"/>
 
-	<TextView
-		android:text="Difficulty"
-		android:textSize="45px"
-		android:textColor="@color/MainTextGreen"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:id="@+id/textViewStart"
-		android:layout_marginTop="20px"/>
+		<Spinner
+			android:id="@+id/spinnerInputCategory"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:prompt="@string/qCategory_Prompt"
+			android:layout_marginTop="10px"
+			android:textAlignment="center"
+			android:spinnerMode="dialog"/>
 
-	<Spinner
-        android:id="@+id/spinnerInputDifficulty"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:prompt="@string/qDifficulty_Prompt"
-		android:layout_marginTop="10px"
-		android:textAlignment="center"
-	    android:spinnerMode="dialog"/>
+		<TextView
+			android:text="Difficulty"
+			android:textSize="45px"
+			android:textColor="@color/MainTextGreen"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/textViewDifficulty"
+			android:layout_marginTop="20px"/>
 
-	<TextView
-		android:text="Type"
-		android:textSize="45px"
-		android:textColor="@color/MainTextGreen"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:id="@+id/textViewStart"
-		android:layout_marginTop="20px"/>
+		<Spinner
+			android:id="@+id/spinnerInputDifficulty"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:prompt="@string/qDifficulty_Prompt"
+			android:layout_marginTop="10px"
+			android:textAlignment="center"
+			android:spinnerMode="dialog"/>
 
-	<Spinner
-        android:id="@+id/spinnerInputType"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:prompt="@string/qType_Prompt"
-		android:layout_marginTop="10px"
-		android:textAlignment="center"
-	    android:spinnerMode="dialog"/>
+		<TextView
+			android:text="Type"
+			android:textSize="45px"
+			android:textColor="@color/MainTextGreen"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/textViewType"
+			android:layout_marginTop="20px"/>
+
+		<Spinner
+			android:id="@+id/spinnerInputType"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:prompt="@string/qType_Prompt"
+			android:layout_marginTop="10px"
+			android:textAlignment="center"
+			android:spinnerMode="dialog"/>
+	</LinearLayout>
+
 
 
 	<Button
@@ -95,7 +106,7 @@
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:id="@+id/beginButton"
-	    android:layout_marginTop="50px"
+	    android:layout_marginTop="80px"
 	    android:textSize="62px"/>
 
 </LinearLayout>

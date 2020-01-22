@@ -47,7 +47,7 @@ namespace TriviaApp
 
             View view = convertView;
 
-            //TODO - MAKE IT SO THAT ALL TEXT VALUE ON QUESTION CARD WILL SHOW AS STYLED OR NOT STYLED AT ALL (DECODE JSON TO UTF8)
+            //TODO - DECODE JSON RESPONSE SO QUESTION LOOKS MORE READABLE
 
             if (view == null)
                 view = _context.LayoutInflater.Inflate(Resource.Layout.Questions_Row_Layout, null);
@@ -64,7 +64,7 @@ namespace TriviaApp
             //button4.Tag = position;
 
             var questionsListView = view.FindViewById<ListView>(Resource.Id.questionsListView);
-
+            int startPosition = 0;
 
             List<string> Answers = new List<string>();
             //ADD ALL QUESTION ANSWERS TO A LIST
@@ -74,8 +74,8 @@ namespace TriviaApp
                 Answers.Add(answer);
             }
 
-            Random rng = new Random();
             //SHUFFLE ANSWERS
+            Random rng = new Random();
             int n = Answers.Count;
             while (n > 1)
             {
@@ -87,34 +87,26 @@ namespace TriviaApp
             }
 
             //MAKE SURE BUTTONS ARE VISIBLE
-            view.FindViewById<Button>(Resource.Id.answer1Btn).Visibility = ViewStates.Visible;
-            view.FindViewById<Button>(Resource.Id.answer2Btn).Visibility = ViewStates.Visible;
-            view.FindViewById<Button>(Resource.Id.answer3Btn).Visibility = ViewStates.Visible;
-            view.FindViewById<Button>(Resource.Id.answer4Btn).Visibility = ViewStates.Visible;
+            button1.Visibility = ViewStates.Visible;
+            button2.Visibility = ViewStates.Visible;
+            button3.Visibility = ViewStates.Visible;
+            button4.Visibility = ViewStates.Visible;
 
             //CHECK HOW MANY ANSWERS ARE
             if (item.Type == "multiple" && Answers.Count == 4)
             {
-                view.FindViewById<Button>(Resource.Id.answer1Btn).Text = Answers[0];
-                view.FindViewById<Button>(Resource.Id.answer2Btn).Text = Answers[1];
-                view.FindViewById<Button>(Resource.Id.answer3Btn).Text = Answers[2];
-                view.FindViewById<Button>(Resource.Id.answer4Btn).Text = Answers[3];
+                button1.Text = Answers[0];
+                button2.Text = Answers[1];
+                button3.Text = Answers[2];
+                button4.Text = Answers[3];
             }
-            //else if (Answers.Count == 3)
-            //{
-            //    view.FindViewById<Button>(Resource.Id.answer1Btn).Text = Answers[0];
-            //    view.FindViewById<Button>(Resource.Id.answer2Btn).Text = Answers[1];
-            //    view.FindViewById<Button>(Resource.Id.answer3Btn).Text = Answers[2];
-            //    view.FindViewById<Button>(Resource.Id.answer4Btn).Visibility = ViewStates.Gone;
-            //}
             else if (item.Type == "boolean" && Answers.Count == 2)
             {
-                view.FindViewById<Button>(Resource.Id.answer1Btn).Text = "True";
-                view.FindViewById<Button>(Resource.Id.answer2Btn).Text = "False";
-                view.FindViewById<Button>(Resource.Id.answer3Btn).Visibility = ViewStates.Gone;
-                view.FindViewById<Button>(Resource.Id.answer4Btn).Visibility = ViewStates.Gone;
+                button1.Text = "True";
+                button2.Text = "False";
+                button3.Visibility = ViewStates.Gone;
+                button4.Visibility = ViewStates.Gone;
             }
-
             button1.Click += ListView_ItemClick;
             button2.Click += ListView_ItemClick;
             button3.Click += ListView_ItemClick;
@@ -123,27 +115,31 @@ namespace TriviaApp
 
             void ListView_ItemClick(object sender, EventArgs e)
             {
-                int pos = (int)((Button)sender).Tag;
-                var selectedButton = (Button)sender;
-                string selectedAnswer = selectedButton.Text;
-                string correctAnswer = item.Correct_Answer;
-                Context context = Application.Context;
-                ToastLength duration = ToastLength.Short;
+                if (position == startPosition)
+                {
+                    //int pos = (int)((Button)sender).Tag;
+                    var selectedButton = (Button)sender;
+                    string selectedAnswer = selectedButton.Text;
+                    string correctAnswer = item.Correct_Answer;
+                    Context context = Application.Context;
+                    ToastLength duration = ToastLength.Short;
+                    string text = "";
 
-                if (selectedAnswer == correctAnswer)
-                {
-                    string text = correctAnswer + " -> Correct!";
+                    if (selectedAnswer == correctAnswer)
+                    {
+                        text = correctAnswer + " -> Correct!";
+                    }
+                    else
+                    {
+                        text = "Incorrect! Correct -> " + correctAnswer;
+
+                    }
                     var toast = Toast.MakeText(context, text, duration);
                     toast.Show();
+                    _items.RemoveAt(position);
+                    _context.RunOnUiThread(() => this.NotifyDataSetChanged());
+                    startPosition++;
                 }
-                else
-                {
-                    string text = "Incorrect! Correct -> " + correctAnswer;
-                    var toast = Toast.MakeText(context, text, duration);
-                    toast.Show();
-                }
-                _items.RemoveAt(position);
-                _context.RunOnUiThread(() => this.NotifyDataSetChanged());
 
                 button1.Click -= ListView_ItemClick;
                 button2.Click -= ListView_ItemClick;

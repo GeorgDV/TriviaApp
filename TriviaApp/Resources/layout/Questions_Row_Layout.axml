@@ -3,8 +3,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-	android:gravity="center_horizontal"
-	android:background="@color/MainThemeGreen">
+	android:gravity="center_horizontal">
 
 	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
@@ -36,24 +35,24 @@
 			android:text="Answer 1"
 			android:textColor="@color/MainTextGreen"
 			android:backgroundTint="@color/AnswerButtonColor"
-			android:layout_width="250px"
+			android:layout_width="300px"
 			android:layout_height="wrap_content"
 			android:id="@+id/answer1Btn"
 			android:textSize="36px"
 			android:layout_marginTop="10px"
 			android:layout_marginLeft="10px"
-			android:layout_marginRight="40px"
+			android:layout_marginRight="30px"
 			android:layout_marginBottom="10px"/>
 			<Button
 			android:text="Answer 2"
 			android:textColor="@color/MainTextGreen"
 			android:backgroundTint="@color/AnswerButtonColor"
-			android:layout_width="250px"
+			android:layout_width="300px"
 			android:layout_height="wrap_content"
 			android:id="@+id/answer2Btn"
 			android:textSize="36px"
 			android:layout_marginTop="10px"
-			android:layout_marginLeft="40px"
+			android:layout_marginLeft="30px"
 			android:layout_marginRight="10px"
 			android:layout_marginBottom="10px"/>
 		</LinearLayout>
@@ -69,24 +68,24 @@
 			android:text="Answer 3"
 			android:textColor="@color/MainTextGreen"
 			android:backgroundTint="@color/AnswerButtonColor"
-			android:layout_width="250px"
+			android:layout_width="300px"
 			android:layout_height="wrap_content"
 			android:id="@+id/answer3Btn"
 			android:textSize="36px"
 			android:layout_marginTop="10px"
 			android:layout_marginLeft="10px"
-			android:layout_marginRight="40px"
+			android:layout_marginRight="30px"
 			android:layout_marginBottom="10px"/>
 			<Button
 			android:text="Answer 4"
 			android:textColor="@color/MainTextGreen"
 			android:backgroundTint="@color/AnswerButtonColor"
-			android:layout_width="250px"
+			android:layout_width="300px"
 			android:layout_height="wrap_content"
 			android:id="@+id/answer4Btn"
 			android:textSize="36px"
 			android:layout_marginTop="10px"
-			android:layout_marginLeft="40px"
+			android:layout_marginLeft="30px"
 			android:layout_marginRight="10px"
 			android:layout_marginBottom="10px"/>
 		</LinearLayout>

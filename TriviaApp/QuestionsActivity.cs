@@ -41,6 +41,7 @@ namespace TriviaApp
                 var intent = new Intent(this, typeof(ChooseTriviaActivity));
                 this.StartActivity(intent);
             }
+
         }
     }
 }
