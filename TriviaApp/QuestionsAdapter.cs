@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
 using Android.App;
 using Android.Content;
 using Android.Graphics;
@@ -59,10 +58,6 @@ namespace TriviaApp
             var button2 = view.FindViewById<Button>(Resource.Id.answer2Btn);
             var button3 = view.FindViewById<Button>(Resource.Id.answer3Btn);
             var button4 = view.FindViewById<Button>(Resource.Id.answer4Btn);
-            button1.Click -= ListView_ItemClick;
-            button2.Click -= ListView_ItemClick;
-            button3.Click -= ListView_ItemClick;
-            button4.Click -= ListView_ItemClick;
             //button1.Tag = position;
             //button2.Tag = position;
             //button3.Tag = position;
@@ -112,7 +107,7 @@ namespace TriviaApp
             //    view.FindViewById<Button>(Resource.Id.answer3Btn).Text = Answers[2];
             //    view.FindViewById<Button>(Resource.Id.answer4Btn).Visibility = ViewStates.Gone;
             //}
-            else if ( item.Type == "boolean" && Answers.Count == 2)
+            else if (item.Type == "boolean" && Answers.Count == 2)
             {
                 view.FindViewById<Button>(Resource.Id.answer1Btn).Text = "True";
                 view.FindViewById<Button>(Resource.Id.answer2Btn).Text = "False";
@@ -128,30 +123,32 @@ namespace TriviaApp
 
             void ListView_ItemClick(object sender, EventArgs e)
             {
-                int btnPosition = (int)((Button)sender).Tag;
+                int pos = (int)((Button)sender).Tag;
                 var selectedButton = (Button)sender;
                 string selectedAnswer = selectedButton.Text;
                 string correctAnswer = item.Correct_Answer;
                 Context context = Application.Context;
                 ToastLength duration = ToastLength.Short;
-                
+
                 if (selectedAnswer == correctAnswer)
                 {
                     string text = correctAnswer + " -> Correct!";
                     var toast = Toast.MakeText(context, text, duration);
                     toast.Show();
-                    selectedButton.HighlightColor.Equals(Color.DarkGreen);
-                    selectedButton.Clickable = false;
                 }
                 else
                 {
                     string text = "Incorrect! Correct -> " + correctAnswer;
                     var toast = Toast.MakeText(context, text, duration);
                     toast.Show();
-                    selectedButton.HighlightColor.Equals(Color.Red);
-                    selectedButton.Clickable = false;
                 }
+                _items.RemoveAt(position);
+                _context.RunOnUiThread(() => this.NotifyDataSetChanged());
 
+                button1.Click -= ListView_ItemClick;
+                button2.Click -= ListView_ItemClick;
+                button3.Click -= ListView_ItemClick;
+                button4.Click -= ListView_ItemClick;
             }
         }
 
